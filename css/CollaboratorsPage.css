@@ -1,0 +1,289 @@
+.collaborators-page {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, rgb(249, 250, 251), rgb(240, 249, 255), rgb(255, 247, 237));
+  padding-top: 4rem;
+  transition: background-color 0.3s ease;
+}
+
+.dark .collaborators-page {
+  background: linear-gradient(to bottom right, rgb(17, 24, 39), rgb(31, 41, 55), rgb(17, 24, 39));
+}
+
+.collaborators-container {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: fadeIn 0.5s ease;
+}
+
+@media (min-width: 1024px) {
+  .collaborators-container {
+    padding: 2rem;
+  }
+}
+
+/* Header */
+.collaborators-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .collaborators-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.collaborators-header-info h1 {
+  color: rgb(17, 24, 39);
+}
+
+.dark .collaborators-header-info h1 {
+  color: white;
+}
+
+.collaborators-header-subtitle {
+  color: rgb(75, 85, 99);
+  font-size: 1.125rem;
+}
+
+.dark .collaborators-header-subtitle {
+  color: rgb(156, 163, 175);
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.stat-card-content {
+  padding: 1.5rem;
+}
+
+.stat-label {
+  color: rgb(75, 85, 99);
+  margin-bottom: 0.25rem;
+}
+
+.dark .stat-label {
+  color: rgb(156, 163, 175);
+}
+
+.stat-value {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.stat-value-sky {
+  color: rgb(2, 132, 199);
+}
+
+.dark .stat-value-sky {
+  color: rgb(56, 189, 248);
+}
+
+.stat-value-orange {
+  color: rgb(234, 88, 12);
+}
+
+.dark .stat-value-orange {
+  color: rgb(251, 146, 60);
+}
+
+.stat-value-green {
+  color: rgb(21, 128, 61);
+}
+
+.dark .stat-value-green {
+  color: rgb(74, 222, 128);
+}
+
+/* Collaborators List */
+.collaborators-list-divider {
+  border-bottom: 1px solid rgb(243, 244, 246);
+}
+
+.dark .collaborators-list-divider {
+  border-color: rgb(55, 65, 81);
+}
+
+.collaborator-row {
+  padding: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.collaborator-row:hover {
+  background: rgb(249, 250, 251);
+}
+
+.dark .collaborator-row:hover {
+  background: rgba(55, 65, 81, 0.5);
+}
+
+.collaborator-row-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.collaborator-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.collaborator-avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+  background: linear-gradient(to bottom right, rgb(14, 165, 233), rgb(249, 115, 22));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+}
+
+.collaborator-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.collaborator-name-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.collaborator-name {
+  color: rgb(17, 24, 39);
+}
+
+.dark .collaborator-name {
+  color: white;
+}
+
+.collaborator-role-badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.role-owner {
+  color: rgb(147, 51, 234);
+  background: rgb(250, 245, 255);
+}
+
+.dark .role-owner {
+  color: rgb(196, 181, 253);
+  background: rgba(147, 51, 234, 0.3);
+}
+
+.role-editor {
+  color: rgb(37, 99, 235);
+  background: rgb(239, 246, 255);
+}
+
+.dark .role-editor {
+  color: rgb(147, 197, 253);
+  background: rgba(37, 99, 235, 0.3);
+}
+
+.role-viewer {
+  color: rgb(75, 85, 99);
+  background: rgb(249, 250, 251);
+}
+
+.dark .role-viewer {
+  color: rgb(156, 163, 175);
+  background: rgba(75, 85, 99, 0.3);
+}
+
+.collaborator-email-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: rgb(75, 85, 99);
+  margin-bottom: 0.75rem;
+}
+
+.dark .collaborator-email-row {
+  color: rgb(156, 163, 175);
+}
+
+.collaborator-email-row svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.collaborator-calendars {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.calendars-label {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  color: rgb(75, 85, 99);
+}
+
+.dark .calendars-label {
+  color: rgb(156, 163, 175);
+}
+
+.calendars-label svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.calendar-badge {
+  padding: 0.25rem 0.75rem;
+  color: white;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.calendar-badge-work {
+  background: rgb(14, 165, 233);
+}
+
+.calendar-badge-personal {
+  background: rgb(249, 115, 22);
+}
+
+.calendar-badge-family {
+  background: rgb(34, 197, 94);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

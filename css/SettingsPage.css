@@ -1,0 +1,211 @@
+.settings-page {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, rgb(249, 250, 251), rgb(240, 249, 255), rgb(255, 247, 237));
+  padding-top: 4rem;
+  transition: background-color 0.3s ease;
+}
+
+.dark .settings-page {
+  background: linear-gradient(to bottom right, rgb(17, 24, 39), rgb(31, 41, 55), rgb(17, 24, 39));
+}
+
+.settings-container {
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: fadeIn 0.5s ease;
+}
+
+@media (min-width: 1024px) {
+  .settings-container {
+    padding: 2rem;
+  }
+}
+
+/* Header */
+.settings-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.settings-header-info h1 {
+  color: rgb(17, 24, 39);
+}
+
+.dark .settings-header-info h1 {
+  color: white;
+}
+
+.settings-header-subtitle {
+  color: rgb(75, 85, 99);
+  font-size: 1.125rem;
+}
+
+.dark .settings-header-subtitle {
+  color: rgb(156, 163, 175);
+}
+
+.settings-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+/* Card Sections */
+.settings-section-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: rgb(2, 132, 199);
+}
+
+.dark .settings-section-icon {
+  color: rgb(56, 189, 248);
+}
+
+.settings-section-title {
+  color: rgb(17, 24, 39);
+}
+
+.dark .settings-section-title {
+  color: white;
+}
+
+.settings-section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.settings-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Theme Selection */
+.theme-selector {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.theme-button {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 2px solid;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: transparent;
+}
+
+.theme-button-inactive {
+  border-color: rgb(209, 213, 219);
+  color: rgb(55, 65, 81);
+}
+
+.theme-button-inactive:hover {
+  border-color: rgb(56, 189, 248);
+}
+
+.dark .theme-button-inactive {
+  border-color: rgb(75, 85, 99);
+  color: rgb(209, 213, 219);
+}
+
+.theme-button-active-light {
+  border-color: rgb(14, 165, 233);
+  background: rgb(240, 249, 255);
+  color: rgb(3, 105, 161);
+}
+
+.theme-button-active-dark {
+  border-color: rgb(14, 165, 233);
+  background: rgba(14, 165, 233, 0.3);
+  color: rgb(56, 189, 248);
+}
+
+.dark .theme-button-active-dark {
+  background: rgba(14, 165, 233, 0.3);
+  color: rgb(56, 189, 248);
+}
+
+/* Week Start / Time Format Selection */
+.option-selector {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.option-button {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 2px solid;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: transparent;
+}
+
+.option-button-inactive {
+  border-color: rgb(209, 213, 219);
+}
+
+.option-button-inactive:hover {
+  border-color: rgb(56, 189, 248);
+}
+
+.dark .option-button-inactive {
+  border-color: rgb(75, 85, 99);
+  color: rgb(209, 213, 219);
+}
+
+.option-button-active {
+  border-color: rgb(14, 165, 233);
+  background: rgb(240, 249, 255);
+  color: rgb(3, 105, 161);
+}
+
+.dark .option-button-active {
+  background: rgba(14, 165, 233, 0.3);
+  color: rgb(56, 189, 248);
+}
+
+/* Labels */
+.settings-label {
+  display: block;
+  margin-bottom: 0.75rem;
+  color: rgb(55, 65, 81);
+}
+
+.dark .settings-label {
+  color: rgb(209, 213, 219);
+}
+
+/* Sticky Save Button for Mobile */
+.settings-mobile-actions {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  gap: 0.75rem;
+  z-index: 40;
+}
+
+@media (min-width: 1024px) {
+  .settings-mobile-actions {
+    display: none;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

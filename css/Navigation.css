@@ -1,0 +1,97 @@
+/* Navigation styles converted from TSX layout */
+
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: white;
+  border-bottom: 1px solid rgb(229 231 235);
+  box-shadow: 0 10px 25px rgb(15 23 42 / 0.05);
+}
+
+.dark .site-nav {
+  background: rgb(15 23 42);
+  border-color: rgb(30 41 59);
+  box-shadow: 0 10px 25px rgb(0 0 0 / 0.35);
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  color: rgb(37 99 235);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-link {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.75rem;
+  color: rgb(75 85 99);
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  background: rgb(243 244 246);
+  color: rgb(17 24 39);
+}
+
+.nav-link.active {
+  background: linear-gradient(to right, rgb(14 165 233), rgb(59 130 246));
+  color: white;
+  box-shadow: 0 10px 25px rgb(59 130 246 / 0.25);
+}
+
+.dark .nav-link {
+  color: rgb(156 163 175);
+}
+
+.dark .nav-link:hover {
+  background: rgb(55 65 81);
+  color: white;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, rgb(14 165 233), rgb(249 115 22));
+  color: white;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+}
+
+.nav-menu-button {
+  display: none;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-menu-button { display: block; }
+}

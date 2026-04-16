@@ -1,0 +1,271 @@
+.create-calendar-page {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, rgb(249, 250, 251), rgb(240, 249, 255), rgb(255, 247, 237));
+  padding-top: 4rem;
+  transition: background-color 0.3s ease;
+}
+
+.dark .create-calendar-page {
+  background: linear-gradient(to bottom right, rgb(17, 24, 39), rgb(31, 41, 55), rgb(17, 24, 39));
+}
+
+.create-calendar-container {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: fadeIn 0.5s ease;
+}
+
+@media (min-width: 1024px) {
+  .create-calendar-container {
+    padding: 2rem;
+  }
+}
+
+/* Header */
+.create-calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.create-calendar-header-info h1 {
+  color: rgb(17, 24, 39);
+}
+
+.dark .create-calendar-header-info h1 {
+  color: white;
+}
+
+.create-calendar-header-subtitle {
+  color: rgb(75, 85, 99);
+  font-size: 1.125rem;
+}
+
+.dark .create-calendar-header-subtitle {
+  color: rgb(156, 163, 175);
+}
+
+/* Section Headers */
+.create-calendar-section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.create-calendar-section-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: rgb(2, 132, 199);
+}
+
+.dark .create-calendar-section-icon {
+  color: rgb(56, 189, 248);
+}
+
+.create-calendar-section-title {
+  color: rgb(17, 24, 39);
+}
+
+.dark .create-calendar-section-title {
+  color: white;
+}
+
+.create-calendar-section-subtitle {
+  font-size: 0.875rem;
+  color: rgb(75, 85, 99);
+}
+
+.dark .create-calendar-section-subtitle {
+  color: rgb(156, 163, 175);
+}
+
+/* Context Selection */
+.context-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.context-button {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  border: 2px solid;
+  transition: all 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+  background: transparent;
+}
+
+.context-button-inactive {
+  border-color: rgb(229, 231, 235);
+}
+
+.context-button-inactive:hover {
+  border-color: rgb(209, 213, 219);
+}
+
+.dark .context-button-inactive {
+  border-color: rgb(55, 65, 81);
+}
+
+.dark .context-button-inactive:hover {
+  border-color: rgb(75, 85, 99);
+}
+
+.context-button-work {
+  border-color: rgb(14, 165, 233);
+  background: rgb(240, 249, 255);
+}
+
+.dark .context-button-work {
+  background: rgba(14, 165, 233, 0.3);
+}
+
+.context-button-personal {
+  border-color: rgb(249, 115, 22);
+  background: rgb(255, 247, 237);
+}
+
+.dark .context-button-personal {
+  background: rgba(249, 115, 22, 0.3);
+}
+
+.context-button-family {
+  border-color: rgb(34, 197, 94);
+  background: rgb(240, 253, 244);
+}
+
+.dark .context-button-family {
+  background: rgba(34, 197, 94, 0.3);
+}
+
+.context-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.context-label {
+  font-size: 0.875rem;
+  color: rgb(55, 65, 81);
+}
+
+.dark .context-label {
+  color: rgb(209, 213, 219);
+}
+
+/* Collaborator Selection */
+.collaborator-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.collaborator-item {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  border: 2px solid;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.collaborator-item-inactive {
+  border-color: rgb(229, 231, 235);
+}
+
+.collaborator-item-inactive:hover {
+  border-color: rgb(209, 213, 219);
+}
+
+.dark .collaborator-item-inactive {
+  border-color: rgb(55, 65, 81);
+}
+
+.dark .collaborator-item-inactive:hover {
+  border-color: rgb(75, 85, 99);
+}
+
+.collaborator-item-active {
+  border-color: rgb(14, 165, 233);
+  background: rgb(240, 249, 255);
+}
+
+.dark .collaborator-item-active {
+  background: rgba(14, 165, 233, 0.3);
+}
+
+.collaborator-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.collaborator-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.collaborator-avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  background: linear-gradient(to bottom right, rgb(56, 189, 248), rgb(251, 146, 60));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.collaborator-name {
+  color: rgb(17, 24, 39);
+}
+
+.dark .collaborator-name {
+  color: white;
+}
+
+.collaborator-email {
+  font-size: 0.875rem;
+  color: rgb(75, 85, 99);
+}
+
+.dark .collaborator-email {
+  color: rgb(156, 163, 175);
+}
+
+.collaborator-check {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 9999px;
+  background: rgb(14, 165, 233);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.collaborator-check svg {
+  width: 1rem;
+  height: 1rem;
+  color: white;
+}
+
+/* Actions */
+.create-calendar-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

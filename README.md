@@ -73,21 +73,6 @@ See `.env.example` for safe placeholder values.
 3. Open the app in your browser and register a user.
 4. If you want demo data, run `php init_users.php` in a local environment after the database is configured.
 
-### Notes
-
-- The PHP app is the primary runtime in this repository.
-- The Node files remain in the repo as a legacy implementation snapshot.
-- Do not commit real database or SMTP credentials.
-- If SMTP is not configured, password reset emails will not be delivered.
-
-### Publishing This Copy
-
-This directory is intended to be a public-safe version of the project. Before publishing:
-
-1. Review `.env.example` and replace all local values in your deployment environment.
-2. Initialize a fresh Git repository in this folder.
-3. Push it to a new public GitHub repository instead of reusing the private repository history.
-
 ## Türkçe
 
 Croissant Schedule; küçük ekipler, arkadaş grupları ve birlikte çalışan projeler için geliştirilmiş paylaşımlı bir müsaitlik uygulamasıdır. Kullanıcılar takvim oluşturabilir, davet kodlarıyla kişi ekleyebilir, gün veya saat bazında müsaitlik işleyebilir, not bırakabilir ve erişimi tek bir yerden yönetebilir.
@@ -140,18 +125,3 @@ Güvenli örnek değerler için `.env.example` dosyasına bak.
 2. Projeyi `index.php` giriş noktası olacak şekilde PHP ile servis et.
 3. Tarayıcıda uygulamayı aç ve bir kullanıcı hesabı oluştur.
 4. Demo veri istersen veritabanı ayarlarından sonra yerel ortamda `php init_users.php` çalıştır.
-
-### Notlar
-
-- Bu repoda asıl çalışan yapı PHP uygulamasıdır.
-- Node dosyaları eski uygulama katmanının referans kopyası olarak tutulur.
-- Gerçek veritabanı veya SMTP bilgilerini repoya commit etme.
-- SMTP ayarlı değilse şifre sıfırlama e-postaları gönderilmez.
-
-### Bu Kopyayı Public Olarak Yayınlama
-
-Bu klasör projenin public paylaşım için temizlenmiş sürümüdür. Yayınlamadan önce:
-
-1. `.env.example` dosyasını incele ve gerçek değerleri yalnızca kendi deployment ortamında tanımla.
-2. Bu klasörde yeni bir Git deposu başlat.
-3. Eski özel repo geçmişini taşımak yerine bunu yeni bir public GitHub reposuna gönder.
